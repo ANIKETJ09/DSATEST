@@ -1,0 +1,37 @@
+Q:- Implement a stack using a list in Python. Include the necessary methods such as push, pop, and isempty.
+
+
+class stack:
+    def __init__(self):
+        self.stack = []
+
+    def push(self, item):
+        self.stack.append(item)
+
+    def pop(self):
+        if not self.isempty():
+            return self.stack.pop()
+        else:
+            print("stack is empty.")
+            return None
+
+    def isempty(self):
+        return len(self.stack) == 0
+
+stack = stack()
+
+stack.push(2)
+stack.push(3)
+stack.push(4)
+
+print(stack.pop())  
+
+print(stack.isempty())  
+
+print(stack.pop())  
+print(stack.pop())  
+
+print(stack.isempty())  
+
+print(stack.pop())  
+
